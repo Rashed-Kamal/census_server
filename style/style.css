@@ -1,0 +1,146 @@
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+html{
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    display: block;
+    justify-items: center;
+    
+}
+
+
+nav{
+    background-color: lightseagreen;
+    display: block;
+justify-items: center;
+
+    /*padding: 0px; */
+   
+}
+nav .nav-design{
+    max-width: 1040px;
+    display:flex;
+    margin-left: auto;
+    margin-right: auto;
+}
+nav .nav-design h2{
+    padding: 10px;
+}
+
+a {
+    display: inline-flex;
+    text-decoration: none;
+}
+
+
+.body-container{
+    background:#fcd6b5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 1240px;
+    height: 60em;
+    padding:15px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: gray 0px 0px 15px;
+    position: relative;
+   
+}
+
+.blur-body {
+    filter: blur(20%);
+    display: none;
+}
+
+.popup {
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    padding: 50px;
+    box-shadow: 0 5px 30px rgb(0,0,0,.30);
+    transition: 0.5%;
+}
+form{
+    display: block;
+
+}
+
+fieldset {
+    display: block;
+    width: 600px;
+    border-radius: 20px;
+    margin-left: 2px;
+    margin-right: 2px;
+    padding-top: 0.35em;
+    padding-bottom: 0.625em;
+    padding-left: 0.75em;
+    padding-right: 0.75em;
+    border: 2px groove (internal value);
+  }
+
+  .hide {
+      display: none;
+  }
+  .show {
+      display: block;
+  }
+
+  span.width {
+      display: inline-block;
+      width: 15em;
+  }
+  span .hide{ display: none;}
+  span.error{color:red;}
+ /* .active {background-color: #aea;}
+
+ /* input:invalid, select:invalid {background-color: bisque;}
+  /* input:valid, select:valid{ background-color: #aea;} */
+
+  .focused{
+      background: #aea; 
+        }
+.hide {
+    display: none;
+}
+.show{
+    display: block;
+}
+
+
+
+/* footer design goes here */
+
+footer{
+    
+    height:auto;
+    background: lightseagreen;
+    color: whitesmoke;
+}
+.footer-row{
+    display:flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content:center;
+        
+}
+.footer-col{
+    display: inline-block;
+    width: 200px;
+    height: 150px;
+    padding: 20px;
+    margin: 10px;
+}
+.copyright{
+    padding: 10px;
+    text-align: center;
+}

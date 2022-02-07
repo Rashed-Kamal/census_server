@@ -1,7 +1,9 @@
 <?php
-// This is a new journey for php
+include 'view/header.php';
 ?>
-<!DOCTYPE html>
-<html>
-    <p>This is a new world of php</p>
-</html>
+
+<h1>This page is under construction</h1>
+
+<?php
+include 'view/footer.php';
+?>
