@@ -7,10 +7,10 @@
         
         <title>2021 Cencus</title>
         
-        <script type="text/javascript" src="jquery-3.5.1.min.js">
+        <script type="text/javascript" src="scripts/jquery-3.5.1.min.js">
         // jQuery latest version 3.5.1
         </script>
-        <script type="text/javascript" src="myscript.js">
+        <script type="text/javascript" src="scripts/myscript.js">
         // My javascript function
         </script>
         <script type="text/javascript">
@@ -21,17 +21,18 @@
     </head>
     <body>
         <header>
-        <nav>
-            <!----Navigation and Logo will be here---->
-            <div class="nav-design">
-                <a href="index.html">
-                
-                <img src="./images/au_logo3.png" alt="2021 Census information" width="105px" height="100px">
-                
-                    <h2> 2021 Census information</h2>
-                </a>
-            </div>
-            
-        </nav>
+            <nav>
+                <!----Navigation and Logo will be here---->
+                <div class="nav-design">
+                    <a href=''>
+                    
+                    <img src="./images/au_logo3.png" alt="2021 Census information" width="105px" height="100px">
+                    
+                        <h2> 2021 Census information</h2>
+                    </a>
+                </div>
+                        
+            </nav>
         </header>
         <div class="body-container" id="body-cont">
+             <!---body formating starts from here-->

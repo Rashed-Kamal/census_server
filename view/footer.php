@@ -1,6 +1,8 @@
+</div>
 <footer>
                 <!-- Footer will go here [ this section borrowed from Assignment 1]
                 Copy Right information & Contacts-->
+
                 <div class="footer-row">
                     <div class="footer-col">
                         <p>Links</p>
