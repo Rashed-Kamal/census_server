@@ -1,24 +1,11 @@
-function initialise () {
+function initialise() {
+    //alert("hello from new script");
+    //let num =document.getElementById("totalPerson").Value;
 
-    alert("value of totalPerson ");
-    
-    var incrementVal=2;
-    var incr ;
-
-    //var num=$("#totalPerson").val();
-    let num =document.getElementById("totalPerson").Value;
-    console.log(num);    
-    //console.log("value of num "+num);
-   
-
-    if (num== undefined || num == NaN){
-        alert("please enter a number of person")
-    } else{
-        $("#start").click(function(){
-
-       
-        
-        for( var incr=2; incr<=(parseInt($("#totalPerson").val()));incr++){
+    function createTemplate(num){
+        var incrementVal=2;
+        var incr ;
+        for( var incr=2; incr<=num;incr++){
 
             var fieldsetName =document.createElement('fieldset');
             fieldsetName.classList.add("fieldset"+incr);
@@ -350,257 +337,40 @@ function initialise () {
 
 
         }
+    }
+    
+    
 
     // make visible first form
-    
-    var blur = document.getElementById("intro");
-    blur.classList.add("blur-body");
 
-    var displayForm= document.getElementById('fieldset1');
-    displayForm.classList.toggle('hide');
-    displayForm.classList.toggle('popup');
-
-    // make rest of the visible one by one
-
-    for(let i=1;i<=(parseInt($("#totalPerson").val()));i++){
-        var field= document.getElementById('fieldset'+i);
-        var  nextBtn=document.getElementById('btn'+i);
-        console.log(nextBtn);
-        if(nextBtn){
-            nextBtn.addEventListener('click', function (){
-             var currentForm= document.getElementById('fieldset'+i);
-             currentForm.classList.toggle('hide');
-             //currentForm.classList.toggle('popup');
-               let j=i+1;
-                var nextForm= document.getElementById('fieldset'+j);
-                console.log(nextForm);
-                if(nextForm){
-                   nextForm.classList.toggle('hide');
-                   nextForm.classList.toggle('popup');
-                    //var start= document.getElementById('fieldset'+i+1);
-                 }
-                 else {
-                    var dwlForm =document.getElementById('dwlfield');                     
-                    dwlForm.classList.toggle('hide');
-                    dwlForm.classList.toggle('popup');
-                 }
-            });
-        }
-        
-    }
-
-    var  dwlBtn=document.getElementById('dwlbtn');
-    if(dwlBtn){
-        dwlBtn.addEventListener('click', function (){
-            var dwlForm =document.getElementById('dwlfield');
-            dwlForm.classList.toggle('hide');
-
-            var ratingForm =document.getElementById('ratingForm');                     
-            ratingForm.classList.toggle('hide');
-            ratingForm.classList.toggle('popup');
-
-            var sub =document.getElementById('submit1');
-            sub.classList.toggle('hide');
-    
-
-        });
-    }
+    // *** everything starts from here
 
 
-    
-});
-    
-
-    
-
-      // focus on current selector
-     $('#form1').delegate("*","focus blur", function(){
-         var elem = $(this);
-         setTimeout(function(){
-             elem.toggleClass("focused", elem.is(":focus"));
-         }, 0);
-     }) ;
-
-     //-----Validation-------//
-
-     //trial for next button [Not working]
-     
-    
-
-
-     // input type:text validation [not working]
-
-     // 1. first get total number of input in the current fieldset whose type is text 
-     //   [update: we only have 2 input whose type is text so easier to get it by id]
-     // 2. use for loop to get nth position of input value one by one
-     // 3. validate that input value inside for loop
-    // var valid ={
-      //  given:false,
-        //family:false
-    //}
-
-
-    // var valid=true;
-    // var x =1;
-    // if($('#totalPerson')==null || $('#totalPerson').is(undefined) ){
-    //     var start= document.getElementById('fieldset'+x);
-    //         start.setAttribute('class', 'fieldset hide');
-    // } else{
-     
-    // // $("#btn1").click(function (){
-       
-    //     do{
-    //         var start= document.getElementById('fieldset'+x);
-    //         start.setAttribute('class', 'show');
-    //         //var fName =start.querySelector('input[name=givenName'+x+']');
-    //         //fName.addEventListener('blur',validateText);
-    //         var names=start.querySelectorAll('input[type=text]');
-    //         for(let i=0;i<names.length;i++){
-    //             names.item(i).addEventListener('blur',validateText);
-    //         }
-
-    //         //var lName = start.querySelector('input[name=familyName'+x+']');
-    //         //lName.addEventListener('blur',validateText);
-           
-    //         var next=start.querySelector('button[name=btn'+x+']');
-    //         next.addEventListener('click', isValidated);
-    //        // $("#btn1").click(isValidated());
-
-    //         function validateText(ev){
-    //             let value = ev.target.value;
-    //             let name = ev.target.name;
-
-    //             console.log("input field "+ name +'='+value);
-    //             console.log("value of x ",x);
-    //             //valid=true;
+let btn1 = document.getElementById("btn1");
+var num = ""
+if (btn1){
+    btn1.addEventListener("click",function(){
+        var numInput = document.getElementById("totalPerson");
+        //var num = "";
+         console.log("what is this "+numInput);
+         //alert("start button is clicked "+num)
+         if (numInput){
+            num = numInput.value;
+            console.log("This is "+num);
+            createTemplate(num);
+            //visibility()
             
+         }
 
-    //             var loc=ev.target.parentElement.parentElement;
-    //             if(loc==null) return;
-    //             var err=loc.querySelector('label+span');
-    //             if(err == null) return;
-    //            // if(value == null || value.length == 0){
-    //              //   valid=false;
-    //            // }
-
-    //           //  var textReg = new RegExp (" [a-zA-Z -]+ ");
-    //         // if(!textReg.test(value)){
-
-    //         if( value.match(" [a-zA-Z]+ ")){
-    //                 err.setAttribute('class','error hide');
-    //                 valid=true;
-                    
-    //             } 
-    //             else{
-    //                 err.setAttribute('class','error');
-    //                 valid=false;
-    //             }
-
-    //         }
-    //         function isValidated(){
-    //            // if (valid){
-    //             var start= document.getElementById('fieldset'+x);
-    //             start.setAttribute('class', ' fieldset show');
-    //                 //x++;
-    //                // var next= document.querySelector('button[name=btn'+x+']');
-                
-    //                //var start= document.getElementById('fieldset'+y);
-    //                //start.setAttribute('class', 'fieldset'+y+' show');
-
-    //             }
         
-    //     x++;
-
             
-    //     }while(x<num);
-    // }   //else end
-
-     //});
-
-
-
-     
-        //$('#gName + span').attr('class','hide'); 
-       
-        //$('span').addClass('error');   
-        //$('span').removeClass('hide');
-
-         //var fieldLocation=$(this).closest(fieldset);
-
-        // var firstName=$('#gName').val();
-        // var textReg = new RegExp (" [a-zA-Z -]+ ");
-        // if(!textReg.test(firstName)){
-         //   $(this).parent().siblings().first().child().child().last().addClass('error');
-           // $('#gName.parent().last').next().removeClass('hide'); 
-       //     $('#gName + span').addClass('error');        
-
-       // }else{
-       //     $('#gName + span').addClass('hide');
-       //     $('#gName + span').removeClass('error hide');
-       // }
-     
-     //another try
-
-     
-     //another try end
-
-    //  valid=true;
-
-    //  var inputValue= $('#fieldset'+incr+ 'input[typeo=Text]');
-    //  if( $('input') [typeof Text]){
-    //  var txtReg = new RegExp (" *[a-zA-Z -]+ *");
-    //  var inputText =$('#form1 input[type=text]').val();
-    //  if(!textReg.test(inputText) || inputText.val()==undefined){
-    //      var para = ev.target.parentElement.parentElement;
-    //      var err= para.querySelector('label+span'); 
-    //      return valid=false;
-    //    }}
-
-     // input type:number validation
-
-
-     // input type:email validation
-
-     // others: not null validation
-       
+         
+    })
     
-
-
-
-
-     //From prac7 1.10
-     // var li = document.querySelector('ul.first > li:last-child');
-     // ulnode = document.createElelment('ul');
-    //  var clone = li.cloneNode(true);
-    //  ulnode.appendChild(clone);
-    //  div.appendChild(ulnode);
-
-    // var gender= function() {
-    //     $('#gender').clone()
-    //     .attr('name','gender_menu'+incr)
-    //    .appendTo(label); 
-    // }
-
-
-   // $(span).append('<input type=text name=givenName required/>');
-    
-    //var givenInput=getElementById('gName');
-
-    //var gName = document.createElement("input");
-
-// get location where I want to put the element
-   
-    
-   // fieldsetName.appendChild(gName);
-
-    }
 }
+//console.log("Outside of func num value: "+num);
 
 
 
 
-// $('#btn1').on('click',function(){
-//     var totalPerson = $("#totalPerson").val();
-//     console.log(totalPerson);
-//     if totalPerson>1{
-//     for(var i=0; i<totalPerson;i++){
+}

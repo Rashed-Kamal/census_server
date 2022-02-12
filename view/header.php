@@ -10,7 +10,7 @@
         <script type="text/javascript" src="scripts/jquery-3.5.1.min.js">
         // jQuery latest version 3.5.1
         </script>
-        <script type="text/javascript" src="scripts/myscript.js">
+        <script type="text/javascript" src="scripts/jqscript.js">
         // My javascript function
         </script>
         <script type="text/javascript">

@@ -1,9 +1,11 @@
-<?php
-include 'header.php'; ?>
+
+<p><label>Total people living in the house on census night:
+    <input id="totalPerson" type="number" name="" value="<?php echo $totalPerson?>" /></label></p>
+
 
 <form action="." id="form1" method="POST">
 
-<fieldset id="fieldset1" class="fieldset1 ">
+    <fieldset id="fieldset1" class="fieldset1">
                                 <legend>Person 1</legend>
                                 <!---Q1-->
                                 <p><label><span class="width">Given Name: </span>
@@ -285,7 +287,9 @@ include 'header.php'; ?>
                                        <button  id="btn1" type="button" name="btn1" value="Continue"> Next btn</button> <!---but this has to be js validtion -->   
                                     </label></p>
 
-                            </fieldset>
+    </fieldset>
+                          
+   
 </form>
 
-                            <?php include 'footer.php'; ?>
+                         
