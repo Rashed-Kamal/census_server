@@ -1,5 +1,6 @@
 <?php
 require('php_helper.php');
+
 include 'view/header.php';
 
 
@@ -23,13 +24,15 @@ if( $action == 'introPage'){
     } else {
        // header('Location: .');
         include ('personal_details.php');
+        debug_to_console($totalPerson);
+       //echo " <script type>initialise()</script>";
     }    
 
 } elseif ($action == 'personalDetails') {
     $message = "This page is under construction";
 }
 
-debug_to_console($totalPerson);
+
 
 
 
