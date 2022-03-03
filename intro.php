@@ -12,7 +12,7 @@
         </p>
     <form action= '.' method="POST">
         <label>Lets start with - How many people spent the Census night at the dwelling?                        
-        <input id="totalPerson" name="totalPerson" type="number" value="" min="1" max="100" default=''></label>
+        <input id="totalPerson" name="totalPerson" type="number" value="" min="1" max="100" ></label>
         <input type="hidden" name="action" value="numOfCustomer">
         <input id="start" type="submit" value="Start">
     </form>

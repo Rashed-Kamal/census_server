@@ -1,11 +1,11 @@
 
 <p><label>Total people living in the house on census night:
-    <input id="totalPerson" type="number" name="" value="<?php echo $totalPerson?>" /></label></p>
+    <input id="totalPerson" type="number" value="<?php echo $totalPerson ?>" /></label></p>
 
 
 <form action="." id="form1" method="POST">
 
-    <fieldset id="fieldset1" class="fieldset1">
+    <fieldset class="fieldset">
                                 <legend>Person 1</legend>
                                 <!---Q1-->
                                 <p><label><span class="width">Given Name: </span>
@@ -291,5 +291,6 @@
                           
    
 </form>
+
 
                          
